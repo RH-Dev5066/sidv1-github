@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Bonto-Bontoa - Website Resmi</title>
+    
+    <!-- TAMBAHKAN KODE INI (Favicon) -->
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="apple-touch-icon" href="Logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation (Bootstrap 5 Navbar) -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#beranda">
+                <!-- Logo Gambar (Ganti src dengan URL logo Anda) -->
+                <img src="Logo.png" alt="Logo Desa Bonto-Bontoa" class="navbar-logo-img me-2">
+                
+                <!-- Teks Nama Desa & Lokasi -->
+                <div class="d-flex flex-column">
+                    <span class="brand-text">DESA BONTO - BONTOA</span>
+                    <span class="brand-subtext">Kec. Tompobulu, Kab. Bantaeng</span>
+                </div>
+            </a>
+
+            <!-- Hamburger Button (Bootstrap Toggler) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profil">Profil Desa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kependudukan">Kependudukan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pemerintahan">Pemerintahan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active" style="--slide-bg: url('slide1.jpeg');">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-slide" style="--slide-bg: url('slide2.png');">
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="status-dot"></span>
+                <span id="statusText">Buka Sekarang</span>
+            </div>
+            <h1 class="hero-title reveal">Selamat Datang di<br><span>Desa Bonto-Bontoa</span></h1>
+            <p class="hero-subtitle reveal">Desa yang asri, produktif, dan sejahtera dengan potensi pertanian unggulan yang menjadi kebanggaan masyarakat</p>
+            <div class="hero-actions reveal">
+                <a href="#profil" class="btn btn-primary-custom">Jelajahi Desa</a>
+                <a href="#kontak" class="btn btn-outline-custom">Hubungi Kami</a>
+            </div>
+        </div>
+        
+        <div class="hero-slider-nav">
+            <button class="slider-btn" id="prevSlide" aria-label="Previous slide">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-btn" id="nextSlide" aria-label="Next slide">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Kata Sambutan Section -->
+    <section id="sambutan" class="sambutan-section">
+        <div class="container-custom">
+            <div class="section-header">
+                <h2 class="section-title">Kata Sambutan Kepala Desa</h2>
+                <p class="section-subtitle">Sambutan hangat dari pimpinan desa kita</p>
+            </div>
+
+            <div class="sambutan-content">
+                <div class="sambutan-image">
+                    <img src="kades.jpeg" alt="Foto Kepala Desa">
+                    <div class="sambutan-name">
+                        <h4>H. Syamsuddin, B</h4>
+                        <span>Kepala Desa Bonto-Bontoa</span><br>
+                        <span>Periode 2023-2031</span>
+                    </div>
+                </div>
+
+                <div class="sambutan-text">
+                    <div class="quote-icon">
+                        <i class="bi bi-quote"></i>
+                    </div>
+                    <p>
+                        Assalamualaikum Warahmatullahi Wabarakatuh, <br><br>
+                        Puji syukur kita panjatkan ke hadirat Allah SWT atas segala nikmat dan karunia-Nya. Selamat datang di website resmi Desa Bonto-Bontoa. Website ini merupakan salah satu wujud transparansi dan informasi publik dalam rangka meningkatkan pelayanan kepada masyarakat.
+                    </p>
+                    <p>
+                        Kami berharap dengan adanya website ini, masyarakat dapat dengan mudah mengakses informasi mengenai pemerintahan, pembangunan, dan kegiatan yang ada di desa kita. Mari bersama-sama kita membangun desa untuk mencapai kesejahteraan bersama.
+                    </p>
+                    <p class="sambutan-signature">
+                        Wassalamualaikum Warahmatullahi Wabarakatuh.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Identitas Desa -->
+    <section class="identitas-section">
+        <div class="container-custom">
+            <div class="section-header reveal">
+                <span class="section-label">Tentang Kami</span>
+                <h2 class="section-title">Identitas Desa</h2>
+            </div>
+            
+            <div class="row g-4 reveal">
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-label">Nama Desa</span>
+                            <strong class="card-value">Bonto-Bontoa</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-label">Kode Desa</span>
+                            <strong class="card-value">73.03.04.2009</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="bi bi-layout-text-window"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-label">Luas Wilayah</span>
+                            <strong class="card-value">4,91 km²</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-label">Jumlah Penduduk</span>
+                            <strong class="card-value"><span class="counter" data-target="2090">0</span>+ Jiwa</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="bi bi-house-door"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-label">Jumlah Dusun</span>
+                            <strong class="card-value">3 Dusun</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-label">Tahun Berdiri</span>
+                            <strong class="card-value">1997</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="jam-pelayanan reveal">
+                <div class="jam-header">
+                    <i class="bi bi-clock"></i>
+                    <span>Jam Pelayanan</span>
+                </div>
+                <div class="jam-content">
+                    <div class="jam-item">
+                        <span class="jam-hari">Senin - Jumat</span>
+                        <!-- TAMBAHKAN ID DI BAWAH INI -->
+                        <span class="jam-waktu" id="jamWaktuWeekday">08.00 - 14.00 WITA</span>
+                    </div>
+                    <div class="jam-item minggu">
+                        <span class="jam-hari">Sabtu, Minggu & Libur</span>
+                        <span class="jam-waktu">Tutup</span>
+                    </div>
+                </div>
+                <div class="jam-status" id="jamStatus">
+                    <span class="status-indicator"></span>
+                    <span class="status-text">Memuat...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil Desa -->
+    <section id="profil" class="profil-section">
+        <div class="container-custom">
+            <div class="section-header reveal">
+                <span class="section-label">Mengenal Lebih Dekat</span>
+                <h2 class="section-title">Profil Desa Bonto-Bontoa</h2>
+            </div>
+
+            <!-- Sejarah Desa -->
+            <div class="profil-block reveal">
+                <h3 class="block-title">Sejarah Desa</h3>
+                <div class="sejarah-content">
+                    <p>Pada tahun 1997 desa bonto-bontoa mulai dimekarkan dari kelurahan banyorang pada waktu itu di namai desa bonto-bontoa karena berbatasan dengan bukit ompoa. Dan pada masa itu di pimpin oleh seorang kepala desa yang bernama M.Nasir S.Sos selama 8 tahun pada waktu itu desa bonto-bontoa terdiri dari 3 dusun yaitu:</p>
+                        <ul class="dusun-list">
+                            <li>Dusun Bulu-Bulu Yang Di Kepalai Oleh Syamsudar</li>
+                            <li>Dusun Bonto-Bontoa Yang Di Kepalai Oleh Muh. Idrus</li>
+                            <li>Dusun Taricco Yang Di Kepalai Oleh Harun</li>
+                            <li>Dusun Paradayya Yang Di Kepalai Oleh (Persiapan)</li>
+                        </ul>
+                    <p>Kemudian pada tahun 2005 kepemimpinan M. Nasir S.Sos berakhir pada tahun 2005 dan di gantikan oleh Amiruddin A.SE dengan kepemimpinannya desa bonto-bontoa menjadi Tiga dusun 7 RW / 14 RT, pada masa sekarang masing-masing di pimpin oleh :</p>
+                    
+                    <!-- Tabel Baru: 4 Kolom, 6 Baris -->
+                    <div class="table-responsive mt-4">
+                        <!-- Class diubah menjadi table-compact-center -->
+                        <table class="table-compact-center">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Tahun</th>
+                                    <th>Nama Kepala Desa</th>
+                                    <th>Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1997-2005</td>
+                                    <td>Muh. Nasir, S.Sos</td>
+                                    <td>Hasil Pemekaran Kelurahan Banyorang Kecamatan Tompobulu Kabupaten Bantaeng</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2005-2011</td>
+                                    <td>Amiruddin A.SE</td>
+                                    <td>Berdasarkan hasil pemilihan langsung Masyarakat Desa Bonto-Bontoa</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>2011-2017</td>
+                                    <td>Amiruddin A.SE</td>
+                                    <td>Berdasarkan hasil pemilihan langsung Masyarakat Desa Bonto-Bontoa</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2017-2023</td>
+                                    <td>M. Ridwan</td>
+                                    <td>Berdasarkan hasil pemilihan langsung Masyarakat Desa Bonto-Bontoa</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>2023-2031</td>
+                                    <td>H. Syamsuddin, B</td>
+                                    <td>Berdasarkan hasil pemilihan langsung Masyarakat Desa Bonto-Bontoa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visi Misi -->
+            <div class="profil-block visi-misi reveal">
+                
+                <!-- Bagian Visi (Atas) -->
+                <div class="visi-section mb-5">
+                    <h3 class="block-title text-center">Visi</h3>
+                    <div class="visi-box p-4 bg-light rounded text-center">
+                        <p class="visi-text mb-0">
+                            "BERSATU MENUJU MASYARAKAT DESA BONTO-BONTOA YANG LEBIH SEJAHTERA, TRANSPARAN, DEMOKRATIS, SERTA MENCIPTAKAN PELAYANAN MASYARAKAT YANG MAKSIMAL"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bagian Misi (Bawah) -->
+                <div class="misi-section">
+                    <h3 class="block-title">Misi</h3>
+                    <ol class="misi-list">
+                        <li>Pemerintah Desa Melakukan Penetapan Peraturan Desa Bersama dengan BPD Ketentuan Perundang-Undangan.</li>
+                        <li>Pemerintah Desa Akan Menetapkan administarasi Pemerintahan yang ter-arah yang sesuai dengan prosedur pengadministrasian. Seperti pelayanan umum, pelayanan kependudukan dan administrasi Desa.</li>
+                        <li>Menyelesaikan Permasalahan yang timbul di masyarakat sesuai struktur dengan kondisi permasalahan yang di hadapi oleh masyarakat.</li>
+                        <li>Mengadakan kerjasama antar Desa Khusunya Desa Tetangga menyangkut kemaslahatan Masyarakat.</li>
+                        <li>Sebagai Pemerintah yang bertanggung jawab, ter-arah dan Transparan akan melakukan dan membuat LPPD Tahunan dari LKPJ Akhir jabatan di Hadapan BPD dan Masyarakat sesuai dengan Prosedur dan Pemenuhan Tanggung jawab dari pada Tugas BPD yang termuat dalam Undang-Undang nomor 72 Tahun 2005.</li>
+                        <li>Mengerti berbagai potensi yang ada di desa dan mengetahui tujuan pembagunan dari berbagai sektor kebutuhan masyarakat.</li>
+                        <li>Menumbuhkan Peran serta masyarakat dalam pembagunan dan melibatkan masyarakat dalam pengawasan pembangunan.</li>
+                        <li>Mewujudkan Kehidupan yang demokrasi di tingkat desa setiap pembangunan yang akan dilaksanakan dengan terlebih dahulu diadakan musyawarah untuk mencapai mufakat.</li>
+                        <li>Memberikan Kesempatan kepada masyarakat untuk mengelola potensi masyarakat itu sendiri sebagai wujud masyarakat yang berdaya dan mandiri.</li>
+                        <li>Staf Desa Memberikan service Publik (memberikan informasi tentang pelayanan administarsi yang baik untuk masyarakat).</li>
+                        <li>Seluruh Kebutuhan Masyarakat tentang persuratan, keterangan, pengantar yang ada di desa di lakukan secara gratis dan mudah dengan tetap mengacu pada system dan admisnistarsi yang baik.</li>
+                        <li>Memberikan Fasilitas Kepada masyarakat ketika dibutuhkan Seperti tenda, kursi dll dalam rangka acara masyarakat.</li>
+                        <li>Memfasilitasi kreatifitas Remaja dan Pemuda sebagai wujud persiapan generasi penerus yang akan datang.</li>
+                        <li>Mengaktifkan kegiatan-kegiatan keagamaan yang ada di Desa, pembinaan majlis Taklim, TPA dan kegiatan keagamaan lainnya.</li>
+                        <li>Membina Kerja sama dengan Aparat yang terkait dalam menjaga keamanan, ketertiban lingkungan dan kesejateraan masyarakat.</li>
+                        <li>Mengatur sebaik mungkin bantuan-bantuan Masyarakat dalam aspek Kerohanian yang meliputi rasa aman, tentram dan keagamaan.</li>        
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Letak & Luas -->
+            <div class="profil-block reveal">
+                <h3 class="block-title">Letak dan Luas Wilayah</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="wilayah-card">
+                            <div class="wilayah-icon">
+                                <i class="bi bi-globe-americas"></i>
+                            </div>
+                            <div class="wilayah-info">
+                                <span class="wilayah-label">Luas Total</span>
+                                <strong class="wilayah-value">491 Ha</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="wilayah-card">
+                            <div class="wilayah-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="wilayah-info">
+                                <span class="wilayah-label">Ketinggian</span>
+                                <strong class="wilayah-value">25-525 mdpl</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="wilayah-card">
+                            <div class="wilayah-icon">
+                                <i class="bi bi-pin-map"></i>
+                            </div>
+                            <div class="wilayah-info">
+                                <span class="wilayah-label">Koordinat</span>
+                                <strong class="wilayah-value">-5.4532°S, 120.0495°E</strong>
+                                <span class="wilayah-comparison">Kec. Tompobulu, Kab. Bantaeng, Provinsi Sulawesi Selatan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jumlah Penduduk -->
+            <div class="profil-block reveal">
+                <h3 class="block-title">Statistik Penduduk</h3>
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card">
+                            <div class="stat-number"><span class="counter" data-target="2090">0</span>+</div>
+                            <span class="stat-label">Total Penduduk</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card">
+                            <div class="stat-number"><span class="counter" data-target="708">0</span>+</div>
+                            <span class="stat-label">Kepala Keluarga</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card">
+                            <div class="stat-number"><span class="counter" data-target="1053">0</span>+</div>
+                            <span class="stat-label">Laki-laki</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-card">
+                            <div class="stat-number"><span class="counter" data-target="1037">0</span>+</div>
+                            <span class="stat-label">Perempuan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas Umum -->
+    <section id="fasilitas" class="fasilitas-section">
+        <div class="container-custom">
+            <div class="section-header reveal">
+                <h2 class="section-title">Fasilitas Umum Desa</h2>
+                <p class="section-subtitle">Sarana dan prasarana yang tersedia untuk mendukung kehidupan masyarakat Desa Bonto-Bontoa</p>
+            </div>
+
+            <!-- Pendidikan -->
+            <div class="fasil-section-title reveal">
+                <i class="bi bi-mortarboard me-2"></i>Fasilitas Pendidikan
+            </div>
+            <div class="row g-3 mb-4 reveal">
+                <div class="col-6 col-md-4 col-lg">
+                    <div class="fasil-card">
+                        <!-- Ikon Mainan/Bangunan (TK) -->
+                        <div class="fasil-icon edu"><i class="fa-solid fa-shapes"></i></div>
+                        <h6>Taman Kanak-kanak</h6>
+                        <p>1 unit TK</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg">
+                    <div class="fasil-card">
+                        <!-- Ikon Tas Ransel (SD) -->
+                        <div class="fasil-icon edu"><i class="fa-solid fa-school"></i></div>
+                        <h6>Sekolah Dasar</h6>
+                        <p>3 unit SD</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg">
+                    <div class="fasil-card">
+                        <!-- Ikon Buku Terbuka (SMP) -->
+                        <div class="fasil-icon edu"><i class="fa-solid fa-book-open"></i></div>
+                        <h6>SMP</h6>
+                        <p>1 unit SMP</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg">
+                    <div class="fasil-card">
+                        <!-- Ikon Topi Wisuda (SMA/SMK) -->
+                        <div class="fasil-icon edu"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h6>SMA / SMK</h6>
+                        <p>1 unit SMA</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Keagamaan -->
+            <div class="fasil-section-title reveal">
+                <i class="bi bi-building me-2"></i>Fasilitas Keagamaan
+            </div>
+            <div class="row g-3 mb-4 reveal">
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Masjid (Kubah) -->
+                        <div class="fasil-icon rel"><i class="fa-solid fa-mosque"></i></div>
+                        <h6>Masjid</h6>
+                        <p>8 masjid di 3 dusun</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Tangan Sholat (Musholla) -->
+                        <div class="fasil-icon rel"><i class="fa-solid fa-place-of-worship"></i></div>
+                        <h6>Musholla</h6>
+                        <p>1 musholla di pasar</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Al-Quran (TPA) -->
+                        <div class="fasil-icon rel"><i class="fa-solid fa-book-quran"></i></div>
+                        <h6>TPA / TPQ</h6>
+                        <p>1 unit TPA aktif dengan 46 santri</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kesehatan -->
+            <div class="fasil-section-title reveal">
+                <i class="bi bi-heart-pulse me-2"></i>Fasilitas Kesehatan
+            </div>
+            <div class="row g-3 mb-4 reveal">
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Timbangan Anak (Posyandu) -->
+                        <div class="fasil-icon health"><i class="fa-solid fa-baby"></i></div>
+                        <h6>Posyandu</h6>
+                        <p>4 unit posyandu</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Rumah Sakit (Puskesmas) -->
+                        <div class="fasil-icon health"><i class="fa-solid fa-hospital"></i></div>
+                        <h6>PolinDes</h6>
+                        <p>1 unit Pondok Bersalin Desa</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Bidan/Perawat -->
+                        <div class="fasil-icon health"><i class="fa-solid fa-user-nurse"></i></div>
+                        <h6>Bidan Desa</h6>
+                        <p>3 bidan aktif melayani warga</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Umum Lainnya -->
+            <div class="fasil-section-title reveal">
+                <i class="bi bi-buildings me-2"></i>Fasilitas Umum Lainnya
+            </div>
+            <div class="row g-3 reveal">
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Gedung Pemerintahan -->
+                        <div class="fasil-icon pub"><i class="fa-solid fa-landmark"></i></div>
+                        <h6>Balai Desa</h6>
+                        <p>1 unit Kantor Desa representatif</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Sepak Bola -->
+                        <div class="fasil-icon pub"><i class="fa-solid fa-futbol"></i></div>
+                        <h6>Lapangan Olahraga</h6>
+                        <p>1 lapangan olahraga</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Toko/Pasar -->
+                        <div class="fasil-icon pub"><i class="fa-solid fa-store"></i></div>
+                        <h6>Pasar Desa</h6>
+                        <p>1 unit pasar aktif</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fasil-card">
+                        <!-- Ikon Pohon (TPU) -->
+                        <div class="fasil-icon pub"><i class="fa-solid fa-cross"></i></div>
+                        <h6>TPU (Pemakaman)</h6>
+                        <p>1 area pemakaman umum desa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kependudukan -->
+    <section id="kependudukan" class="kependudukan-section">
+        <div class="container-custom">
+            <div class="section-header reveal">
+                <span class="section-label">Data Statistik</span>
+                <h2 class="section-title">Kependudukan</h2>
+            </div>
+            
+            <div class="data-filter reveal">
+                <h4 class="filter-title">Filter Data</h4>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="dusun1">Dusun Bulu-Bulu</button>
+                    <button class="filter-btn" data-filter="dusun2">Dusun Bonto-Bontoa</button>
+                    <button class="filter-btn" data-filter="dusun3">Dusun Taricco</button>
+                </div>
+            </div>
+
+            <div class="data-table-wrapper reveal">
+                <table class="data-table" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Dusun</th>
+                            <th>RT/RK</th>
+                            <th>Jumlah KK</th>
+                            <th>Total Penduduk</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-category="dusun1">
+                            <td>1</td>
+                            <td>Dusun Bulu-Bulu</td>
+                            <td>8 RT / 4 RK</td>
+                            <td>309+</td>
+                            <td>979+</td>
+                        </tr>
+                        <tr data-category="dusun2">
+                            <td>2</td>
+                            <td>Dusun Bonto-Bontoa</td>
+                            <td>4 RT / 2 RK</td>
+                            <td>190+</td>
+                            <td>519+</td>
+                        </tr>
+                        <tr data-category="dusun3">
+                            <td>3</td>
+                            <td>Dusun Taricco</td>
+                            <td>4 RT / 2 RK</td>
+                            <td>209+</td>
+                            <td>592+</td>
+                        </tr>
+                    </tbody>
+                    <tfoot id="tableFoot">
+                        <tr>
+                            <td colspan="3"><strong>Total</strong></td>
+                            <td><strong>708+</strong></td>
+                            <td><strong>2090+</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pemerintahan -->
+    <section id="pemerintahan" class="pemerintahan-section">
+        <div class="container-custom">
+            <div class="section-header reveal">
+                <span class="section-label">Struktur Organisasi</span>
+                <h2 class="section-title">Pemerintahan Desa</h2>
+            </div>
+
+            <!-- Bagan Organisasi -->
+            <div class="org-chart reveal">
+                <!-- Level 1 -->
+                <div class="org-row">
+                    <div class="org-card kepala" id="card-kepala-desa">
+                        <img src="1.png" alt="Kepala Desa" class="org-avatar">
+                        <div class="role">Kepala Desa</div>
+                        <div class="name">H. Syamsuddin, B</div>
+                    </div>
+                </div>
+                <!-- Connector -->
+                <div class="org-connector-v"></div>
+                <!-- Level 2 -->
+                <div class="org-row">
+                    <div class="org-card" id="card-sekretaris">
+                        <img src="2.png" alt="Sekretaris Desa" class="org-avatar">
+                        <div class="role">Sekretaris Desa</div>
+                        <div class="name">Reskianto, S.Pd.</div>
+                    </div>
+                </div>
+                <div class="org-connector-v"></div>
+                <!-- Level 3 -->
+                <div class="org-row level-3">
+                    <div class="org-card" id="card-kaur-keuangan">
+                        <img src="7.png" alt="Kaur Keuangan" class="org-avatar">
+                        <div class="role">Kaur Keuangan</div>
+                        <div class="name">Muh Haris, S.P.</div>
+                    </div>
+                    <div class="org-card" id="card-kaur-umum">
+                        <img src="3.png" alt="Kaur Umum" class="org-avatar">
+                        <div class="role">Kaur Umum</div>
+                        <div class="name">Nurlia, S.Pd.</div>
+                    </div>
+                    <div class="org-card" id="card-kaur-perencanaan">
+                        <img src="8.png" alt="Kaur Perencanaan" class="org-avatar">
+                        <div class="role">Kaur Perencanaan</div>
+                        <div class="name">-</div>
+                    </div>
+                    <div class="org-card" id="card-kasi-pemerintahan">
+                        <img src="5.png" alt="Kasi Pemerintahan" class="org-avatar">
+                        <div class="role">Kasi Pemerintahan</div>
+                        <div class="name">M. Tahir, S.Pd.</div>
+                    </div>
+                    <div class="org-card" id="card-kasi-kesejahteraan">
+                        <img src="4.png" alt="Kasi Kesejahteraan" class="org-avatar">
+                        <div class="role">Kasi Kesejahteraan</div>
+                        <div class="name">Wilda Afrianti</div>
+                    </div>
+                    <div class="org-card" id="card-kasi-pelayanan">
+                        <img src="6.png" alt="Kasi Pelayanan" class="org-avatar">
+                        <div class="role">Kasi Pelayanan</div>
+                        <div class="name">Miranti</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tugas & Fungsi Accordion -->
+            <div class="tugas-fungsi reveal">
+                <h3 class="block-title">Tugas dan Fungsi</h3>
+                <div class="accordion-custom">
+                    <div class="accordion-item active">
+                        <button class="accordion-header">
+                            <span>Kepala Desa</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <h6>Tugas:</h6>
+                                <li>Memimpin penyelenggaraan pemerintahan desa</li>
+                                <li>Melaksanakan pembangunan desa</li>
+                                <li>Melakukan pembinaan kemasyarakatan</li>
+                                <li>Memberdayakan masyarakat desa</li>
+                            </ul>
+                            <ul>
+                                <h6>Fungsi:</h6>
+                                <li>Menetapkan Peraturan Desa</li>
+                                <li>Mengajukan dan menetapkan APBDes</li>
+                                <li>Membina ketenteraman dan ketertiban masyarakat</li>
+                                <li>Mengelola keuangan dan aset desa</li>
+                                <li>Mewakili desa di dalam dan di luar pengadilan</li>
+                                <li>Mengangkat dan memberhentikan perangkat desa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Sekretaris Desa</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <h6>Tugas:</h6>
+                                <li>Membantu Kepala Desa dalam bidang administrasi pemerintahan</li>
+                            </ul>
+                            <ul>
+                                <h6>Fungsi:</h6>
+                                <li>Mengelola tata usaha umum, keuangan, dan perencanaan</li>
+                                <li>Menyusun rancangan APBDes dan laporan pertanggungjawaban</li>
+                                <li>Mengelola arsip dan dokumen resmi desa</li>
+                                <li>Mengkoordinasikan pelaksanaan tugas perangkat desa lainnya</li>
+                                <li>Menyiapkan bahan perumusan kebijakan Kepala Desa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Kaur Keuangan</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <h6>Tugas:</h6>
+                                <li>Mengelola administrasi dan tata kelola keuangan desa</li>
+                            </ul>
+                            <ul>
+                                <h6>Fungsi:</h6>
+                                <li>Menyusun Rencana Anggaran Kas Desa</li>
+                                <li>Melaksanakan penatausahaan penerimaan dan pengeluaran desa</li>
+                                <li>Menyusun laporan realisasi APBDes</li>
+                                <li>Mengelola buku kas umum dan pembantu</li>
+                                <li>Melakukan verifikasi administrasi keuangan</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Kaur Umum</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <h6>Tugas:</h6>
+                                <li>Mengelola administrasi umum dan perlengkapan desa</li>
+                            </ul>
+                            <ul>
+                                <h6>Fungsi:</h6>
+                                <li>Mengatur surat-menyurat dan arsip</li>
+                                <li>Mengelola inventaris aset desa</li>
+                                <li>Menyediakan sarana dan prasarana kantor desa</li>
+                                <li>Mengatur administrasi kepegawaian perangkat desa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Kaur Perencanaan</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <h6>Tugas:</h6>
+                                <li>Mengelola administrasi perencanaan pembangunan desa</li>
+                            </ul>
+                            <ul>
+                                <h6>Fungsi:</h6>
+                                <li>Menyusun RKPDes (Rencana Kerja Pemerintah Desa)</li>
+                                <li>Menyusun RPJMDes (Rencana Pembangunan Jangka Menengah Desa)</li>
+                                <li>Menyusun dokumen perencanaan dan evaluasi kegiatan</li>
+                                <li>Mengelola data dan informasi pembangunan desa</li>
+                                <li>Menyusun laporan pelaksanaan pembangunan</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Kasi Pemerintahan</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <h6>Tugas:</h6>
+                                <li>Membantu Kepala Desa dalam urusan pemerintahan dan ketertiban</li>
+                            </ul>
+                            <ul>
+                                <h6>Fungsi:</h6>
+                                <li>Mengelola administrasi kependudukan</li>
+                                <li>Membina ketenteraman dan ketertiban masyarakat</li>
+                                <li>Melaksanakan pendataan wilayah dan administrasi pertanahan</li>
+                                <li>Mengelola administrasi kelembagaan desa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Kasi Kesejahteraan</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <h6>Tugas:</h6>
+                                <li>Mengelola bidang pembangunan dan kesejahteraan masyarakat</li>
+                            </ul>
+                            <ul>
+                                <h6>Fungsi:</h6>
+                                <li>Melaksanakan pembangunan sarana prasarana desa</li>
+                                <li>Membina kegiatan sosial, keagamaan, dan ekonomi masyarakat</li>
+                                <li>Mengelola program pemberdayaan masyarakat</li>
+                                <li>Mengkoordinasikan kegiatan pendidikan dan kesehatan di desa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Kasi Pelayanan</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <h6>Tugas:</h6>
+                                <li>Mengelola pelayanan administrasi kepada masyarakat</li>
+                            </ul>
+                            <ul>
+                                <h6>Fungsi:</h6>
+                                <li>Melaksanakan pelayanan surat-menyurat (domisili, pengantar, dll)</li>
+                                <li>Memberikan pelayanan administrasi kependudukan</li>
+                                <li>Mengelola pengaduan masyarakat</li>
+                                <li>Membina hubungan pelayanan publik yang responsif dan transparan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lembaga Desa -->
+            <div class="lembaga-section reveal">
+                <h3 class="block-title">Lembaga Desa</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="lembaga-card">
+                            <div class="lembaga-logo">
+                                <i class="bi-person-heart"></i>
+                            </div>
+                            <h4>PKK</h4>
+                            <span class="lembaga-ketua">Ketua: Hj. Rosdiana</span>
+                            <p>Pembinaan Kesejahteraan Keluarga</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="lembaga-card">
+                            <div class="lembaga-logo">
+                                <i class="bi-people-fill"></i>
+                            </div>
+                            <h4>BPD</h4>
+                            <span class="lembaga-ketua">Ketua: Syamsuriati, S.Pd.</span>
+                            <p>Badan Permusyawaratan Desa</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="lembaga-card">
+                            <div class="lembaga-logo">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <h4>LPM</h4>
+                            <span class="lembaga-ketua">Ketua: Muh. Haris, Sp.</span>
+                            <p>Lembaga Pemberdayaan Masyarakat</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="lembaga-card">
+                            <div class="lembaga-logo">
+                                <i class="bi bi-bank2"></i>
+                            </div>
+                            <h4>BUMDESA</h4>
+                            <span class="lembaga-ketua">Ketua: Zainal. S</span>
+                            <p>Badan Usaha Milik Desa</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="lembaga-card">
+                            <div class="lembaga-logo">
+                                <i class="bi-tree-fill"></i>
+                            </div>
+                            <h4>POKTAN</h4>
+                            <span class="lembaga-ketua">Ketua: Nawir</span>
+                            <p>Kelompok Tani</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Potensi Desa -->
+    <section id="potensi" class="potensi-section">
+        <div class="container-custom">
+            <div class="section-header reveal">
+                <span class="section-label">Unggulan Desa</span>
+                <h2 class="section-title">Potensi Desa</h2>
+            </div>
+
+            <div class="row g-4 reveal" id="potensiGrid">
+                <!-- Row 1: 2 Item -->
+                <div class="col-lg-6">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Porang.png" alt="Porang">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Porang</h4>
+                            <p>Porang berkualitas unggul dengan kandungan glukomanan tinggi, dibudidayakan oleh petani desa secara berkelanjutan dan bernilai jual tinggi.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('porang')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Cengkeh.png" alt="Cengkeh">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Cengkeh</h4>
+                            <p>Cengkeh berkualitas tinggi dengan aroma tajam alami, dibudidayakan secara teliti oleh petani desa menggunakan praktik pertanian berkelanjutan.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('cengkeh')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: 2 Item -->
+                <div class="col-lg-6">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Durian.png" alt="Durian">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Durian</h4>
+                            <p>Durian unggul berkualitas premium dengan perawatan intensif dan tanpa bahan kimia berbahaya, dibudidayakan oleh petani lokal desa.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('durian')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Rambutan.png" alt="Rambutan">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Rambutan</h4>
+                            <p>Rambutan unggulan ditanam secara alami tanpa bahan kimia berbahaya. Dihasilkan oleh petani desa dengan praktik budidaya ramah lingkungan.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('rambutan')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3: 2 Item -->
+                <div class="col-lg-6">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Cokelat.png" alt="Coklat">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Coklat</h4>
+                            <p>Tanaman coklat pilihan dengan mutu biji terbaik, dibudidayakan secara alami oleh petani lokal berpengalaman.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('coklat')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Jagung.png" alt="Jagung">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Jagung</h4>
+                            <p>Jagung unggulan berkualitas prima tanpa penggunaan bahan kimia berbahaya, dibudidayakan oleh petani desa secara berkelanjutan.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('jagung')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Potensi Tersembunyi (Hidden by default) -->
+                <div class="col-lg-6 potensi-hidden">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="lada.png" alt="Merica">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Merica</h4>
+                            <p>Merica unggulan beraroma tajam dan pedas alami. Dibudidayakan petani lokal, berkualitas tinggi dan bernilai jual.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('merica')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 potensi-hidden">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="kopi.png" alt="Kopi">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Kopi</h4>
+                            <p>Kopi berkualitas dengan aroma khas dan cita rasa kuat, dibudidayakan petani lokal untuk hasil panen unggul bernilai tinggi.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('kopi')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 potensi-hidden">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Salak.png" alt="Salak">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Salak</h4>
+                            <p>Salak berkualitas dengan aroma khas dan cita rasa kuat, dibudidayakan petani lokal untuk hasil panen unggul bernilai tinggi.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('salak')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 potensi-hidden">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Nangka.png" alt="Nangka">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Nangka</h4>
+                            <p>Nangka unggul berbuah lebat, manis alami, dan berdaging tebal. Dibudidayakan petani lokal untuk kualitas terbaik dan peluang usaha menjanjikan.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('nangka')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 potensi-hidden">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Pisang.png" alt="Pisang">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Pisang</h4>
+                            <p>Pisang berkualitas dengan rasa manis alami, dibudidayakan petani lokal secara berkelanjutan. Segar, sehat, dan cocok untuk konsumsi maupun usaha olahan.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('pisang')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 potensi-hidden">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Langsat.png" alt="Langsat">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Langsat</h4>
+                            <p>Langsat manis segar berdaging tebal, ideal untuk konsumsi dan peluang usaha. Dirawat petani lokal secara optimal, menghasilkan panen berkualitas dan bernilai tinggi.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('langsat')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 potensi-hidden">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="sukun.png" alt="Sukun">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Sukun</h4>
+                            <p>Sukun berkualitas dengan daging tebal dan tekstur lembut, ideal untuk aneka olahan bernilai jual. Dibudidayakan petani lokal secara optimal untuk hasil panen unggul dan menguntungkan.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('sukun')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 potensi-hidden">
+                    <div class="potensi-card" data-category="pertanian">
+                        <div class="potensi-image">
+                            <img src="Talas.png" alt="Talas">
+                            <span class="potensi-badge">Pertanian</span>
+                        </div>
+                        <div class="potensi-content">
+                            <h4>Talas</h4>
+                            <p>Talas berkualitas dengan umbi besar dan rasa gurih alami, cocok untuk konsumsi maupun peluang usaha. Dibudidayakan petani lokal dengan perawatan optimal untuk hasil panen bernilai jual tinggi.</p>
+                            <button class="btn btn-primary-custom btn-small" onclick="openModal('talas')">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button Lihat Semua -->
+            <div class="potensi-load-more reveal">
+                <button class="btn btn-outline-custom" id="togglePotensiBtn" onclick="togglePotensi()">
+                    <span class="btn-text">Lihat Semua Potensi</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri" class="galeri-section">
+        <div class="container-custom">
+            <div class="section-header reveal">
+                <span class="section-label">Dokumentasi</span>
+                <h2 class="section-title">Galeri Desa</h2>
+            </div>
+
+            <!-- <div class="galeri-tabs reveal">
+                <button class="tab-btn active" data-tab="kegiatan">Kegiatan</button>
+            </div> -->
+
+            <div class="galeri-masonry reveal" id="galeriMasonry">
+                <!-- Konten akan diisi oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="kontak-section">
+        <div class="container-custom">
+            <div class="section-header reveal">
+                <span class="section-label">Hubungi Kami</span>
+                <h2 class="section-title">Kontak Desa</h2>
+            </div>
+
+            <div class="row g-4 mb-5 reveal">
+                <div class="col-lg-5">
+                    <div class="kontak-info">
+                        <div class="kontak-item">
+                            <div class="kontak-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="kontak-detail">
+                                <strong>Alamat</strong>
+                                <p>Bulu-Bulu Desa Bonto-Bontoa, Kec. Tompobulu, Kab. Bantaeng, Sulawesi Selatan 92462</p>
+                            </div>
+                        </div>
+                        
+                        <div class="kontak-item">
+                            <div class="kontak-icon email">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="kontak-detail">
+                                <strong>Email</strong>
+                                <a href="mailto:pembdesbontobontoa01@gmail.com">pembdesbontobontoa01@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://web.facebook.com/Ppid.Bontobontoa" class="social-link" aria-label="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ppid.bontobontoa" class="social-link" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <!-- 
+                        FORM SUBMIT TRADISIONAL 
+                        Pastikan atribut berikut ada:
+                        1. action="URL_FORMSUBMIT"
+                        2. method="POST"
+                        3. enctype="multipart/form-data" (Wajib untuk upload file)
+                    -->
+                    <!-- Ganti bagian form kontak Anda dengan ini -->
+                    <form class="kontak-form" id="kontakForm" action="https://formsubmit.co/serialtvdrama1@gmail.com" method="POST" enctype="multipart/form-data">
+                        <!-- Pengaturan Formsubmit -->
+                        <input type="hidden" name="_subject" value="Pesan Baru dari Website Desa Bonto-Bontoa">
+                        <input type="hidden" name="_next" id="nextUrl" value=""> 
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nama">Nama Lengkap</label>
+                                    <input type="text" id="nama" name="Nama" class="form-control-custom" required placeholder="Masukkan nama Anda">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="Email" class="form-control-custom" required placeholder="Masukkan email Anda">
+                                    <div class="email-feedback" id="emailFeedback"></div>
+                                    <div class="email-allowed-list"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FIELD: NIK (WAJIB) & No. Telepon -->
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nik">NIK <span class="text-danger">*</span></label>
+                                    <input type="text" id="nik" name="NIK" class="form-control-custom" maxlength="16" required placeholder="Masukkan 16 digit NIK">
+                                    <div class="input-feedback" id="nikFeedback"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="telepon">No. Telepon / WhatsApp <span class="text-danger">*</span></label>
+                                    <input type="tel" id="telepon" name="No. Telepon" class="form-control-custom" required placeholder="Contoh: 08123456789">
+                                    <div class="input-feedback" id="teleponFeedback"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FIELD: Alamat -->
+                        <div class="form-group">
+                            <label for="alamat">Alamat <span class="text-danger">*</span></label>
+                            <textarea id="alamat" name="Alamat" rows="2" class="form-control-custom" required placeholder="Masukkan alamat lengkap Anda"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subjek">Subjek <span class="text-danger">*</span></label>
+                            <select id="subjek" name="Subjek" class="form-control-custom" required>
+                                <option value="">Pilih subjek</option>
+                                <option value="Umum">Umum</option>
+                                <option value="Sosial">Sosial</option>
+                                <option value="Kesehatan">Kesehatan</option>
+                                <option value="Keamanan">Keamanan</option>
+                                <option value="Kebersihan">Kebersihan</option>
+                                <option value="Permintaan">Permintaan</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pesan">Pesan</label>
+                            <textarea id="pesan" name="Isi Pesan" rows="4" class="form-control-custom" required placeholder="Tulis pesan Anda"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Label Dinamis -->
+                            <label for="lampiran">
+                                Lampiran Bukti <span id="lampiranRequiredMark" class="text-danger" style="display: none;">*</span>
+                            </label>
+                            
+                            <!-- PESAN LAMPIRAN DINAMIS -->
+                            <div class="lampiran-info" id="lampiranInfo">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <span id="lampiranPesan">Pilih subjek terlebih dahulu untuk melihat persyaratan lampiran.</span>
+                            </div>
+                            
+                            <!-- Input Utama -->
+                            <div class="file-upload-wrapper" id="fileUploadWrapper">
+                                <input type="file" id="lampiran" class="file-upload-input" accept="image/*,.pdf" multiple>
+                                <div class="file-upload-content" id="uploadContent">
+                                    <i class="bi bi-cloud-arrow-up upload-icon"></i>
+                                    <p class="file-upload-text"><strong>Klik untuk upload</strong> atau seret file ke sini</p>
+                                    <span class="file-upload-hint">Format: JPG, PNG, PDF (Maks. 7MB total)</span>
+                                </div>
+                            </div>
+
+                            <!-- Kontainer untuk Input Tersembunyi -->
+                            <div id="hiddenFileInputs" style="display: none;"></div>
+
+                            <!-- File List Preview -->
+                            <div class="file-list-container" id="fileListContainer">
+                                <div class="file-list-header">
+                                    <span class="file-count"><i class="bi bi-files me-1"></i><span id="fileCount">0</span> file dipilih</span>
+                                    <button type="button" class="clear-all-btn" id="clearAllBtn">
+                                        <i class="bi bi-trash3 me-1"></i>Hapus Semua
+                                    </button>
+                                </div>
+                                <div class="file-list" id="fileList"></div>
+                                <div class="file-total-size">
+                                    <div class="total-size-bar">
+                                        <div class="size-bar-fill" id="sizeBarFill"></div>
+                                    </div>
+                                    <div class="total-size-info">
+                                        <span id="totalSizeText">0 KB</span>
+                                        <span class="size-limit">dari 7 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Size Warning -->
+                            <div class="size-warning" id="sizeWarning">
+                                <i class="bi bi-exclamation-triangle-fill"></i>
+                                <span>Total ukuran file melebihi batas 7MB!</span>
+                            </div>
+                            
+                            <!-- Lampiran Required Warning -->
+                            <div class="lampiran-warning" id="lampiranWarning">
+                                <i class="bi bi-exclamation-circle-fill"></i>
+                                <span>Lampiran wajib diisi untuk subjek ini!</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-custom btn-full">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Peta & Batas Wilayah -->
+            <div class="row g-4 reveal">
+                <div class="col-lg-8">
+                    <div class="map-wrapper h-100">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15887.038384284051!2d120.043088286429!3d-5.453415001698133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbeaec5bd19d85f%3A0x1eb73ecc5d9fd2e1!2sBonto-Bontoa%2C%20Kec.%20Tompobulu%2C%20Kabupaten%20Bantaeng%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1771730009759!5m2!1sid!2sid"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 400px;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Lokasi Desa Bonto-Bontoa">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="batas-wilayah-card h-100">
+                        <h3 class="batas-title">
+                            <i class="bi bi-geo-alt-fill me-2"></i>Batas Wilayah
+                        </h3>
+                        <ul class="batas-list">
+                            <li>
+                                <span class="direction-icon north"><i class="bi bi-arrow-up-circle-fill"></i></span>
+                                <div class="batas-info">
+                                    <strong>Sebelah Utara</strong>
+                                    <span>Kelurahan Ereng-Ereng</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="direction-icon east"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                                <div class="batas-info">
+                                    <strong>Sebelah Timur</strong>
+                                    <span>Desa Benteng Malewang Gantarang</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="direction-icon south"><i class="bi bi-arrow-down-circle-fill"></i></span>
+                                <div class="batas-info">
+                                    <strong>Sebelah Selatan</strong>
+                                    <span>Desa Pattalassang</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="direction-icon west"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                                <div class="batas-info">
+                                    <strong>Sebelah Barat</strong>
+                                    <span>Kelurahan Banyorang</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-custom">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <!-- Logo Gambar Footer -->
+                            <img src="Logo.png" alt="Logo Desa Bonto-Bontoa" class="footer-logo-img">
+                            <span>Desa Bonto-Bontoa</span>
+                        </div>
+                        <p>Website resmi Pemerintah Desa Bonto-Bontoa, Kecamatan Tompobulu, Kabupaten Bantaeng, Sulawesi Selatan.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-links">
+                        <h4>Navigasi</h4>
+                        <a href="#beranda">Beranda</a>
+                        <a href="#profil">Profil Desa</a>
+                        <a href="#kependudukan">Kependudukan</a>
+                        <a href="#pemerintahan">Pemerintahan</a>
+                        <a href="#kontak">Kontak</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-links">
+                        <h4>Tautan</h4>
+                        <a href="https://id.wikipedia.org/wiki/Kabupaten_Bantaeng">Pemerintah Kabupaten</a>
+                        <a href="https://id.wikipedia.org/wiki/Tompobulu,_Bantaeng">Kecamatan Tompobulu</a>
+                        <a href="https://sulselprov.go.id/">Provinsi Sulawesi Selatan</a>
+                        <a href="https://kemendagri.go.id/">Kemendagri</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Desa Bonto-Bontoa. Hak Cipta Dilindungi.</p>
+                <p>Created by KKN Gel.II Universitas Teknologi Akba Makassar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Pemesanan -->
+    <div class="modal-custom" id="productModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content modal-order">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Modal (BARU) -->
+    <div class="notification-modal" id="notificationModal">
+        <div class="notification-overlay"></div>
+        <div class="notification-content">
+            <div class="notification-icon-wrapper" id="notificationIconWrapper">
+            </div>
+            <h3 class="notification-title" id="notificationTitle">Berhasil!</h3>
+            <p class="notification-message" id="notificationMessage">Pesan Anda telah terkirim.</p>
+            <button class="notification-btn" id="notificationBtn" onclick="closeNotification()">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="confirmation-overlay"></div>
+        <div class="confirmation-content">
+            <div class="confirmation-icon">
+                <i class="bi bi-question-circle"></i>
+            </div>
+            <h3 class="confirmation-title">Konfirmasi Pengiriman</h3>
+            <p class="confirmation-message">Apakah pesan yang akan dikirim sudah benar?</p>
+            <div class="confirmation-summary" id="confirmationSummary">
+                <!-- Summary akan diisi via JS -->
+            </div>
+            <div class="confirmation-actions">
+                <button class="confirmation-btn btn-cancel" id="btnConfirmNo" type="button">
+                    <i class="bi bi-x-lg me-2"></i>Tidak
+                </button>
+                <button class="confirmation-btn btn-confirm" id="btnConfirmYes" type="button">
+                    <i class="bi bi-check-lg me-2"></i>Ya, Kirim
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-image-container" id="lightboxContainer">
+            <img id="lightboxImage" src="" alt="">
+            <div id="lightboxCaption"></div>
+        </div>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
